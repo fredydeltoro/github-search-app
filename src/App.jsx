@@ -14,10 +14,10 @@ function App() {
             <Link className="navbar-brand" to="/">
               <h1 className="h4 m-0">GitHub Search</h1>
             </Link>
-            <div className="d-flex flex-grow-1 justify-content-center">
+            <div className="search d-flex flex-grow-1 justify-content-center">
               <SearchBar />
             </div>
-            <div>
+            <div className="nav-links">
               <NavLink
                 to="/users"
                 className={({ isActive }) =>
@@ -47,7 +47,7 @@ function App() {
         </nav>
       </header>
 
-      <main className="py-4">
+      <main>
         <div className="container">
           <Routes>
             <Route path="/users" element={<UserSearch />} />

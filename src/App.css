@@ -1,5 +1,7 @@
 header {
   height: 80px;
+  position: fixed;
+  width: 100%;
 }
 
 header h1 {
@@ -18,7 +20,7 @@ header .container {
 
 .search-container input {
   width: 600px;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
 .search-options .btn,
@@ -73,4 +75,46 @@ nav .btn {
 
 .btn.active .status-icon {
   display: none;
+}
+
+main {
+  padding-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    height: auto;
+  }
+
+  .bg-blue {
+    height: auto;
+  }
+
+  .navbar-brand {
+    width: 100%;
+  }
+
+  .search-container {
+    margin: 0;
+  }
+
+  .search {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  main {
+    padding-top: 170px;
+  }
 }
