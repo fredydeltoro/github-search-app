@@ -168,7 +168,7 @@ main ul .repo-card .avatar-square img {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   header {
     height: auto;
   }
@@ -183,6 +183,7 @@ main ul .repo-card .avatar-square img {
 
   .search-container {
     margin: 0;
+    max-width: 100%;
   }
 
   .search {
@@ -203,5 +204,15 @@ main ul .repo-card .avatar-square img {
 
   main {
     padding-top: 170px;
+  }
+}
+
+@media only screen and (max-width: 1028px) and (min-width: 769px) {
+  .search-container {
+    max-width: 450px;
+  }
+
+  .search-container input {
+    width: 100%;
   }
 }
