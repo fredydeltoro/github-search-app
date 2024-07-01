@@ -251,6 +251,10 @@ main ul .repo-card .avatar-square img {
     max-width: 450px;
   }
 
+  .nav-links {
+    margin-left: 10px;
+  }
+
   .search-container input {
     width: 100%;
   }
