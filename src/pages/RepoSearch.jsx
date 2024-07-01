@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { SearchContext } from "../SearchContext";
 import useSearch from "../hooks/useSearch";
+import RepoCard from "../components/RepoCard";
+import convertToKM from "../utils/convertToKM";
 
 const RepoSearch = () => {
   const { searchQuery } = useContext(SearchContext);
@@ -12,14 +14,16 @@ const RepoSearch = () => {
   console.log(results, totalCount);
 
   return (
-    <div>
+    <>
+      <b>{convertToKM(totalCount)} results</b>
       <ul>
         {results.map((item) => (
-          <li>{item.full_name}</li>
+          <li className="repo-card">
+            <RepoCard repo={item} />
+          </li>
         ))}
       </ul>
-      <div>total: {totalCount}</div>
-    </div>
+    </>
   );
 };
 

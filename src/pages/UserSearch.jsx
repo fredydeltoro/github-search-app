@@ -3,12 +3,12 @@ import { SearchContext } from "../SearchContext";
 import useSearch from "../hooks/useSearch";
 import UserCard from "../components/UserCard";
 import Paginator from "../components/Paginator";
-import convertToK from "../utils/convertToK";
+import convertToKM from "../utils/convertToKM";
 
 const UserSearch = () => {
   const [page, setPage] = useState(1);
   const { searchQuery } = useContext(SearchContext);
-  const perPage = 10;
+  const perPage = 2;
   const { results, totalCount, loading, error } = useSearch(
     "users",
     searchQuery,
@@ -23,7 +23,7 @@ const UserSearch = () => {
 
   return (
     <>
-      <b>{convertToK(totalCount)} results</b>
+      <b>{convertToKM(totalCount)} results</b>
       <ul>
         {results.map((item) => (
           <li key={item.id} className="user-card">
