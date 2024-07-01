@@ -148,6 +148,26 @@ main ul .repo-card .avatar-square img {
   border: none;
 }
 
+.custom-jumbotron {
+  margin-top: 20%;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.custom-jumbotron .display-4 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.custom-jumbotron .lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.custom-jumbotron .my-4 {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 @media only screen and (max-width: 600px) {
   header {
     height: auto;
