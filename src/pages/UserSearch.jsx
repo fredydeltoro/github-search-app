@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { SearchContext } from "../SearchContext";
 import useSearch from "../useSearch";
+import UserCard from "../components/UserCard";
+import convertToK from "../utils/convertToK";
 
 const UserSearch = () => {
   const { searchQuery } = useContext(SearchContext);
@@ -12,14 +14,16 @@ const UserSearch = () => {
   console.log(results, totalCount);
 
   return (
-    <div>
+    <>
+      <b>{convertToK(totalCount)} results</b>
       <ul>
         {results.map((item) => (
-          <li>{item.login}</li>
+          <li key={item.id} className="user-card">
+            <UserCard item={item} />
+          </li>
         ))}
       </ul>
-      <div>total: {totalCount}</div>
-    </div>
+    </>
   );
 };
 

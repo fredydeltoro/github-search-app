@@ -49,10 +49,12 @@ function App() {
 
       <main>
         <div className="container">
-          <Routes>
-            <Route path="/users" element={<UserSearch />} />
-            <Route path="/repos" element={<RepoSearch />} />
-          </Routes>
+          <div className="col-md-8 offset-md-2">
+            <Routes>
+              <Route path="/users" element={<UserSearch />} />
+              <Route path="/repos" element={<RepoSearch />} />
+            </Routes>
+          </div>
         </div>
       </main>
     </div>
