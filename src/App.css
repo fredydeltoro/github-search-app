@@ -36,9 +36,48 @@ nav .btn {
 }
 
 .search-container {
-  flex-grow: 1;
+  position: relative;
+  width: 100%;
   max-width: 600px;
-  margin: 0 20px;
+  margin: 0 auto;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.form-control {
+  padding-right: 40px;
+  padding-left: 40px;
+  border-radius: 8px !important;
+}
+
+.btn-clear,
+.btn-search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-clear {
+  left: 5px;
+  border-radius: 8px;
+}
+
+.btn-search {
+  right: 10px;
+}
+
+.btn-clear:hover,
+.btn-search:hover {
+  color: #007bff;
 }
 
 .users-btn {

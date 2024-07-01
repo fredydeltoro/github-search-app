@@ -15,17 +15,34 @@ const SearchBar = () => {
     setValue(e.target.value);
   };
 
+  const handleSearch = () => {
+    setSearchQuery(value);
+  };
+
+  const handleClear = () => {
+    setValue("");
+    setSearchQuery("");
+  };
+
   return (
     <div className="search-container">
-      <input
-        type="text"
-        placeholder="Search"
-        className="form-control"
-        aria-label="Search"
-        value={value}
-        onChange={handleChange}
-        onKeyDown={handleEnter}
-      />
+      <div className="input-group">
+        <button className="btn-clear" onClick={handleClear}>
+          {value && <i className="bi bi-x"></i>}
+        </button>
+        <input
+          type="text"
+          placeholder="Search"
+          className="form-control"
+          aria-label="Search"
+          value={value}
+          onChange={handleChange}
+          onKeyDown={handleEnter}
+        />
+        <button className="btn-search" onClick={handleSearch}>
+          <i className="bi bi-search"></i>
+        </button>
+      </div>
     </div>
   );
 };

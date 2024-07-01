@@ -23,6 +23,9 @@ const useSearch = (endpoint, query, page = 1, perPage = 2) => {
           setError(err.message);
           setLoading(false);
         });
+    } else {
+      setResults([]);
+      setTotalCount(0);
     }
   }, [endpoint, query, page, perPage]);
 
