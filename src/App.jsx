@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, Link, NavLink } from "react-router-dom";
+import { Route, Routes, Link, NavLink, Navigate } from "react-router-dom";
 import SearchBar from "./components/SearchBar";
 import UserSearch from "./pages/UserSearch";
 import RepoSearch from "./pages/RepoSearch";
@@ -51,6 +51,7 @@ function App() {
         <div className="container">
           <div className="col-md-8 offset-md-2">
             <Routes>
+              <Route path="/" element={<Navigate to="/users" />} />
               <Route path="/users" element={<UserSearch />} />
               <Route path="/repos" element={<RepoSearch />} />
             </Routes>
