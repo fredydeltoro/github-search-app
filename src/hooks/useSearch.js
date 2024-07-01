@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useSearch = (endpoint, query, page = 1, perPage = 30) => {
+const useSearch = (endpoint, query, page = 1, perPage = 2) => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -24,7 +24,7 @@ const useSearch = (endpoint, query, page = 1, perPage = 30) => {
           setLoading(false);
         });
     }
-  }, [endpoint, query]);
+  }, [endpoint, query, page, perPage]);
 
   return { results, totalCount, loading, error };
 };

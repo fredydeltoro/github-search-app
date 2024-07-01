@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { SearchContext } from "../SearchContext";
-import useSearch from "../useSearch";
+import useSearch from "../hooks/useSearch";
 
 const RepoSearch = () => {
   const { searchQuery } = useContext(SearchContext);
